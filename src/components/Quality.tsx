@@ -5,33 +5,33 @@ const Quality = () => {
   const certifications = [
     {
       icon: Shield,
-      title: "ISO 9001:2015",
-      description: "Quality Management System certified ensuring consistent product quality",
+      title: "ISO 9002",
+      description: "Quality Management System certified by BIS ensuring consistent product quality",
     },
     {
       icon: Leaf,
-      title: "GOTS Certified",
-      description: "Global Organic Textile Standard for organic cotton processing",
+      title: "ISO 14000",
+      description: "Environmental Management System certified by BIS for sustainable operations",
     },
     {
       icon: Award,
-      title: "OEKO-TEX®",
-      description: "Standard 100 certified products free from harmful substances",
+      title: "BIS Certified",
+      description: "Bureau of Indian Standards certification validating our quality commitment",
     },
     {
       icon: Microscope,
       title: "Uster Tested",
-      description: "All yarns tested for quality parameters using Uster instruments",
+      description: "All yarns tested for quality parameters using advanced testing instruments",
     },
     {
       icon: Recycle,
-      title: "BCI Member",
-      description: "Better Cotton Initiative member promoting sustainable cotton farming",
+      title: "Eco-Friendly",
+      description: "Commitment to sustainable manufacturing and environmental responsibility",
     },
     {
       icon: Globe,
       title: "Export Quality",
-      description: "Meeting international standards for 25+ export destinations",
+      description: "Meeting international standards to compete successfully in global markets",
     },
   ];
 

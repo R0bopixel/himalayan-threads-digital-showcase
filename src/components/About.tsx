@@ -4,10 +4,10 @@ import ScrollReveal from "./ScrollReveal";
 
 const About = () => {
   const highlights = [
-    "State-of-the-art spinning facilities",
-    "ISO 9001:2015 certified operations",
-    "Sustainable & eco-friendly practices",
-    "Global export network",
+    "Ultra-modern spinning technology",
+    "ISO 9002 & ISO 14000 certified by BIS",
+    "Industry-leading manufacturing efficiency",
+    "International market competitiveness",
   ];
 
   return (
@@ -44,16 +44,16 @@ const About = () => {
               </span>
               
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
-                Four Decades of{" "}
-                <span className="text-gradient">Spinning Excellence</span>
+                Industry-Leading{" "}
+                <span className="text-gradient">Manufacturing Efficiency</span>
               </h2>
               
               <p className="font-body text-lg text-muted-foreground mb-6">
-                Himalayan Spinners was founded with a simple yet powerful vision: to create the finest quality yarns while honoring the natural beauty and resources of the Himalayan region.
+                Himalayan Spinners Limited operates one of the most modern greige yarn spinning units in the country, equipped with thousands of spindles and open-end rotors producing premium quality yarns.
               </p>
               
               <p className="font-body text-muted-foreground mb-8">
-                Today, we stand as one of India's leading textile manufacturers, combining traditional craftsmanship with cutting-edge technology. Our integrated spinning mills produce over 50 million kilograms of premium yarn annually, serving clients across 25+ countries.
+                Our factory consists of 4 specialized mills: Mill 1 & 2 for Pure Cotton, Mill 2 & 3 for PC blends, and Mill 4 for PC and Pure Polyester yarns. We produce counts ranging from 16s to 50s, with coarser yarns for towels and finer counts for premium apparel.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8">

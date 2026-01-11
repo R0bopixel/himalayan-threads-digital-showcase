@@ -5,25 +5,25 @@ const Products = () => {
   const products = [
     {
       title: "Pure Cotton Yarn",
-      description: "Premium 100% cotton yarn in various counts, known for breathability and comfort. Perfect for apparel and home textiles.",
-      counts: "Ne 10 - Ne 80",
+      description: "Premium 100% cotton greige yarn spun from quality raw cotton. Off-white in color, ready for dyeing in later processing. Produced in Mill 1 & Mill 2.",
+      counts: "16s, 20s, 24s, 30s, 40s",
       image: "🧶",
     },
     {
       title: "Polyester Cotton Mix",
-      description: "Durable poly-cotton blended yarns combining the best of both fibers. Excellent strength and easy-care properties.",
-      counts: "Various Ratios",
+      description: "Durable PC blended yarns in 52:48 and 65:35 ratios. Combines cotton comfort with polyester strength. Produced in Mill 2, 3 & 4.",
+      counts: "16s, 20s, 24s, 30s, 40s",
       image: "🧵",
     },
     {
       title: "Pure Polyester Yarn",
-      description: "High-tenacity 100% polyester yarns with excellent durability, colorfastness, and wrinkle resistance.",
-      counts: "Ne 20 - Ne 60",
+      description: "High-tenacity 100% polyester yarns with excellent durability and colorfastness. Produced in our specialized Mill 4.",
+      counts: "16s to 50s",
       image: "✨",
     },
     {
       title: "Slub Yarn",
-      description: "Fashion-forward slub and injected slub yarns creating unique textures for contemporary textile applications.",
+      description: "Fashion-forward slub and injected slub yarns creating unique textures. Available in cotton, polyester, and blended varieties.",
       counts: "Custom Specs",
       image: "💫",
     },
@@ -43,7 +43,7 @@ const Products = () => {
           </h2>
           
           <p className="font-body text-lg text-muted-foreground">
-            From classic cotton to innovative specialty yarns, we offer a comprehensive range of products to meet diverse textile manufacturing requirements.
+            Greige yarn spun from cotton and polyester fibers. Our yarns are respected for quality in both domestic and international markets, used by textile mills for dyeing and further processing into fabrics.
           </p>
         </ScrollReveal>
 
