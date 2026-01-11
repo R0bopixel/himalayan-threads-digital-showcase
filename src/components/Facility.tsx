@@ -241,10 +241,6 @@ const Facility = () => {
               </div>
             </ScrollReveal>
 
-            {/* Market Info */}
-            <ScrollReveal delay={0.2}>
-              
-            </ScrollReveal>
           </div>
 
           {/* Right Column - Manufacturing Process */}
