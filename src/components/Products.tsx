@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const Products = () => {
   const products = [
@@ -32,7 +33,7 @@ const Products = () => {
     <section id="products" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent text-sm font-body font-medium mb-4">
             Our Products
           </span>
@@ -44,41 +45,41 @@ const Products = () => {
           <p className="font-body text-lg text-muted-foreground">
             From classic cotton to innovative specialty yarns, we offer a comprehensive range of products to meet diverse textile manufacturing requirements.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {products.map((product, index) => (
-            <div
-              key={product.title}
-              className="group relative bg-card rounded-2xl p-8 border border-border hover:border-accent/30 transition-all duration-300 card-soft hover:card-elevated"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-4xl mb-4">{product.image}</div>
-              
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
-                {product.title}
-              </h3>
-              
-              <p className="font-body text-muted-foreground text-sm mb-4 leading-relaxed">
-                {product.description}
-              </p>
-              
-              <div className="flex items-center justify-between">
-                <span className="font-body text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
-                  {product.counts}
-                </span>
+            <ScrollReveal key={product.title} delay={index * 0.1}>
+              <div
+                className="group relative bg-card rounded-2xl p-8 border border-border hover:border-accent/30 transition-all duration-300 card-soft hover:card-elevated h-full"
+              >
+                <div className="text-4xl mb-4">{product.image}</div>
                 
-                <button className="p-2 rounded-full bg-muted group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                  <ArrowUpRight className="h-4 w-4" />
-                </button>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
+                  {product.title}
+                </h3>
+                
+                <p className="font-body text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {product.description}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <span className="font-body text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+                    {product.counts}
+                  </span>
+                  
+                  <button className="p-2 rounded-full bg-muted group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                    <ArrowUpRight className="h-4 w-4" />
+                  </button>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <ScrollReveal delay={0.4} className="text-center mt-12">
           <p className="font-body text-muted-foreground mb-4">
             Need a custom yarn solution? We specialize in bespoke manufacturing.
           </p>
@@ -89,7 +90,7 @@ const Products = () => {
             Request custom specifications
             <span className="ml-2">→</span>
           </a>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-yarn.jpg";
 
 const Hero = () => {
@@ -18,20 +19,40 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 lg:px-8 pt-20">
         <div className="max-w-3xl">
-          <span className="inline-block px-4 py-2 bg-secondary/20 backdrop-blur-sm rounded-full text-secondary-foreground text-sm font-body font-medium mb-6 animate-fade-up">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-block px-4 py-2 bg-secondary/20 backdrop-blur-sm rounded-full text-secondary-foreground text-sm font-body font-medium mb-6"
+          >
             Trusted Since 1985
-          </span>
+          </motion.span>
           
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight mb-6"
+          >
             Weaving Excellence from the{" "}
             <span className="text-secondary">Heart of Himalayas</span>
-          </h1>
+          </motion.h1>
           
-          <p className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8"
+          >
             Premium quality yarns crafted with precision, passion, and a commitment to sustainable textile manufacturing. From raw fiber to finished yarn, we deliver excellence.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
             <Button 
               size="lg" 
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-body text-base px-8 group"
@@ -46,31 +67,50 @@ const Hero = () => {
             >
               Our Story
             </Button>
-          </div>
+          </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-primary-foreground/20 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-primary-foreground/20"
+          >
             {[
               { value: "40+", label: "Years Experience" },
               { value: "50M+", label: "Kg Yarn/Year" },
               { value: "25+", label: "Countries Export" },
               { value: "500+", label: "Team Members" },
-            ].map((stat) => (
-              <div key={stat.label}>
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+              >
                 <div className="font-display text-3xl md:text-4xl font-bold text-secondary">{stat.value}</div>
                 <div className="font-body text-sm text-primary-foreground/70 mt-1">{stat.label}</div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center p-2">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center p-2"
+        >
           <div className="w-1 h-2 rounded-full bg-primary-foreground/50" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
