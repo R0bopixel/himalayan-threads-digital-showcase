@@ -17,38 +17,38 @@ import warehouseImg from "@/assets/gallery-warehouse.jpg";
 const Gallery = () => {
   const galleryImages = [
     {
-      title: "Modern Spinning Machines",
-      description: "State-of-the-art ring spinning frames ensuring consistent yarn quality",
-      category: "Machinery",
+      title: "Ring Frames",
+      description: "Final spinning happens in spindles where slivers are converted to yarn. Speed determines yarn count.",
+      category: "Spinning",
       image: spinningMachinesImg,
     },
     {
       title: "Production Floor",
-      description: "Our expansive production facility spanning over 50,000 sq ft",
+      description: "Our 4-mill facility with Mill 1-2 for Cotton, Mill 3 for PC, Mill 4 for PC & Polyester",
       category: "Facility",
       image: productionFloorImg,
     },
     {
-      title: "Roving Section",
-      description: "Precision roving frames for optimal fiber alignment",
-      category: "Machinery",
+      title: "Speed Frames",
+      description: "Frames that pull thick strands to elongate and reduce width, creating centimeter-thick slivers",
+      category: "Processing",
       image: rovingImg,
     },
     {
       title: "Winding Department",
-      description: "Automatic winding machines for defect-free yarn packages",
-      category: "Machinery",
+      description: "Final step where yarn is rolled onto hollow cardboard cylinders for packaging and dispatch",
+      category: "Finishing",
       image: windingImg,
     },
     {
       title: "Quality Control Lab",
-      description: "Advanced testing equipment for yarn quality assurance",
+      description: "Advanced testing ensuring our yarn meets ISO 9002 and international export standards",
       category: "Quality",
       image: qualityLabImg,
     },
     {
       title: "Warehouse & Dispatch",
-      description: "Climate-controlled storage for finished goods",
+      description: "Storage for finished greige yarn packages ready for domestic and export shipment",
       category: "Logistics",
       image: warehouseImg,
     },
@@ -116,10 +116,10 @@ const Gallery = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
           {[
-            { value: "50,000+", label: "Sq Ft Facility" },
-            { value: "200+", label: "Spindles" },
-            { value: "24/7", label: "Operations" },
-            { value: "100+", label: "Skilled Workers" },
+            { value: "4", label: "Specialized Mills" },
+            { value: "1000s", label: "Spindles & Rotors" },
+            { value: "5", label: "Production Stages" },
+            { value: "16-50s", label: "Count Range" },
           ].map((stat, index) => (
             <ScrollReveal key={stat.label} delay={0.1 * index}>
               <div className="text-center p-6 rounded-xl bg-card card-soft">

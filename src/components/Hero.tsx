@@ -36,7 +36,7 @@ const Hero = () => {
           duration: 0.7,
           delay: 0.3
         }} className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight mb-6">
-            Weaving Excellence from the{" "}
+            Spinning Excellence from the{" "}
             <span className="text-secondary">Heart of Himalayas</span>
           </motion.h1>
           
@@ -49,7 +49,7 @@ const Hero = () => {
         }} transition={{
           duration: 0.7,
           delay: 0.4
-        }} className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8">Premium quality yarns crafted with precision, passion, and a commitment to sustainable textile manufacturing. From 10s to 50s yarn, we deliver excellence.</motion.p>
+        }} className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8">One of the most modern greige yarn spinning units in the country. Thousands of spindles and open-end rotors producing cotton, polyester, and blended yarns from counts 16s to 50s.</motion.p>
 
           <motion.div initial={{
           opacity: 0,
@@ -82,17 +82,17 @@ const Hero = () => {
           delay: 0.6
         }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-primary-foreground/20">
             {[{
-            value: "40+",
-            label: "Years Experience"
+            value: "4",
+            label: "Spinning Mills"
           }, {
-            value: "50M+",
-            label: "Kg Yarn/Year"
+            value: "1000s",
+            label: "Spindles & Rotors"
           }, {
-            value: "25+",
-            label: "Countries Export"
+            value: "16-50s",
+            label: "Yarn Count Range"
           }, {
-            value: "500+",
-            label: "Team Members"
+            value: "ISO",
+            label: "Certified Quality"
           }].map((stat, index) => <motion.div key={stat.label} initial={{
             opacity: 0,
             scale: 0.9
