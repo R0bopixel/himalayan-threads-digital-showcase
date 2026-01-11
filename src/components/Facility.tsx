@@ -107,7 +107,8 @@ const Facility = () => {
             Manufacturing Excellence
           </h2>
 
-          <p className="font-body text-lg text-muted-foreground">Greige Yarn is thread spun from cotton and other fibers. Off-white in color, it is later dyed and processed into colorful threads used for fabric manufacturing.</p>
+          <p className="font-body text-lg text-muted-foreground">
+        </p>
         </ScrollReveal>
 
         {/* Gallery Carousel */}
