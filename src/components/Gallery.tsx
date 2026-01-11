@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -6,40 +5,52 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import ScrollReveal from "./ScrollReveal";
+
+import spinningMachinesImg from "@/assets/gallery-spinning-machines.jpg";
+import productionFloorImg from "@/assets/gallery-production-floor.jpg";
+import rovingImg from "@/assets/gallery-roving.jpg";
+import windingImg from "@/assets/gallery-winding.jpg";
+import qualityLabImg from "@/assets/gallery-quality-lab.jpg";
+import warehouseImg from "@/assets/gallery-warehouse.jpg";
 
 const Gallery = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const galleryImages = [
     {
       title: "Modern Spinning Machines",
       description: "State-of-the-art ring spinning frames ensuring consistent yarn quality",
       category: "Machinery",
+      image: spinningMachinesImg,
     },
     {
       title: "Production Floor",
       description: "Our expansive production facility spanning over 50,000 sq ft",
       category: "Facility",
+      image: productionFloorImg,
     },
     {
       title: "Roving Section",
       description: "Precision roving frames for optimal fiber alignment",
       category: "Machinery",
+      image: rovingImg,
     },
     {
       title: "Winding Department",
       description: "Automatic winding machines for defect-free yarn packages",
       category: "Machinery",
+      image: windingImg,
     },
     {
       title: "Quality Control Lab",
       description: "Advanced testing equipment for yarn quality assurance",
       category: "Quality",
+      image: qualityLabImg,
     },
     {
       title: "Warehouse & Dispatch",
       description: "Climate-controlled storage for finished goods",
       category: "Logistics",
+      image: warehouseImg,
     },
   ];
 
@@ -47,7 +58,7 @@ const Gallery = () => {
     <section id="gallery" className="py-24 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent text-sm font-body font-medium mb-4">
             Our Facility
           </span>
@@ -59,10 +70,10 @@ const Gallery = () => {
           <p className="font-body text-lg text-muted-foreground">
             Take a virtual tour of our modern manufacturing facility equipped with cutting-edge spinning technology.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Gallery Carousel */}
-        <div className="max-w-5xl mx-auto">
+        <ScrollReveal delay={0.2} className="max-w-5xl mx-auto">
           <Carousel
             opts={{
               align: "start",
@@ -73,31 +84,17 @@ const Gallery = () => {
             <CarouselContent className="-ml-4">
               {galleryImages.map((image, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 aspect-[4/3] card-soft hover:card-elevated transition-all duration-300">
-                    {/* Placeholder pattern for industrial look */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-6xl opacity-30">
-                          {image.category === "Machinery" && "⚙️"}
-                          {image.category === "Facility" && "🏭"}
-                          {image.category === "Quality" && "🔬"}
-                          {image.category === "Logistics" && "📦"}
-                        </div>
-                      </div>
-                      {/* Grid pattern overlay */}
-                      <div
-                        className="absolute inset-0 opacity-5"
-                        style={{
-                          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
-                                          linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-                          backgroundSize: "20px 20px",
-                        }}
-                      />
-                    </div>
+                  <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] card-soft hover:card-elevated transition-all duration-300">
+                    {/* Actual Image */}
+                    <img
+                      src={image.image}
+                      alt={image.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
 
                     {/* Content overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent flex flex-col justify-end p-6">
-                      <span className="inline-block self-start px-2 py-1 bg-accent/20 backdrop-blur-sm rounded text-accent-foreground text-xs font-body font-medium mb-2">
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/30 to-transparent flex flex-col justify-end p-6">
+                      <span className="inline-block self-start px-2 py-1 bg-accent/30 backdrop-blur-sm rounded text-background text-xs font-body font-medium mb-2">
                         {image.category}
                       </span>
                       <h3 className="font-display text-lg font-semibold text-background mb-1">
@@ -114,7 +111,7 @@ const Gallery = () => {
             <CarouselPrevious className="hidden md:flex -left-12 bg-card border-border hover:bg-accent hover:text-accent-foreground" />
             <CarouselNext className="hidden md:flex -right-12 bg-card border-border hover:bg-accent hover:text-accent-foreground" />
           </Carousel>
-        </div>
+        </ScrollReveal>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
@@ -123,13 +120,15 @@ const Gallery = () => {
             { value: "200+", label: "Spindles" },
             { value: "24/7", label: "Operations" },
             { value: "100+", label: "Skilled Workers" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center p-6 rounded-xl bg-card card-soft">
-              <div className="font-display text-2xl md:text-3xl font-bold text-accent mb-1">
-                {stat.value}
+          ].map((stat, index) => (
+            <ScrollReveal key={stat.label} delay={0.1 * index}>
+              <div className="text-center p-6 rounded-xl bg-card card-soft">
+                <div className="font-display text-2xl md:text-3xl font-bold text-accent mb-1">
+                  {stat.value}
+                </div>
+                <div className="font-body text-sm text-muted-foreground">{stat.label}</div>
               </div>
-              <div className="font-body text-sm text-muted-foreground">{stat.label}</div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
