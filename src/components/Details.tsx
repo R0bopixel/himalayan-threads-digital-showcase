@@ -1,63 +1,68 @@
 import { Factory, Layers, Cog, Settings, CircleDot, Package } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 const Details = () => {
-  const mills = [{
-    name: "Mill 1",
-    products: "Pure Cotton"
-  }, {
-    name: "Mill 2",
-    products: "Pure Cotton & PC Blend"
-  }, {
-    name: "Mill 3",
-    products: "PC Blend"
-  }, {
-    name: "Mill 4",
-    products: "PC Blend & Pure Polyester"
-  }];
-  const yarnTypes = [{
-    type: "Pure Cotton",
-    description: "100% cotton yarn for premium textiles"
-  }, {
-    type: "Polyester-Cotton Mix",
-    description: "52:48 and 65:35 blend ratios"
-  }, {
-    type: "Pure Polyester",
-    description: "High-strength synthetic yarn"
-  }];
+  const mills = [
+    { name: "Mill 1", products: "Pure Cotton" },
+    { name: "Mill 2", products: "Pure Cotton & PC Blend" },
+    { name: "Mill 3", products: "PC Blend" },
+    { name: "Mill 4", products: "PC Blend & Pure Polyester" },
+  ];
+
+  const yarnTypes = [
+    { type: "Pure Cotton", description: "100% cotton yarn for premium textiles" },
+    { type: "Polyester-Cotton Mix", description: "52:48 and 65:35 blend ratios" },
+    { type: "Pure Polyester", description: "High-strength synthetic yarn" },
+  ];
+
   const counts = ["16s", "20s", "24s", "30s", "40s", "50s"];
-  const manufacturingProcess = [{
-    step: 1,
-    name: "Carding",
-    machine: "Carding Machine (with Blow Room)",
-    icon: Layers,
-    description: "Cotton bales are spread to make them airy and undergo basic cleaning. The fibers are drawn into thick strands known as sliver."
-  }, {
-    step: 2,
-    name: "Combing",
-    machine: "Combing Machine",
-    icon: Cog,
-    description: "The strands are combed to remove all solid impurities and small fibers, ensuring only quality fibers proceed."
-  }, {
-    step: 3,
-    name: "Drawing",
-    machine: "Speed Frames",
-    icon: Settings,
-    description: "Speed frames pull the thick strands to elongate them and reduce their width. Output is approximately one centimeter thick sliver."
-  }, {
-    step: 4,
-    name: "Spinning",
-    machine: "Ring Frames",
-    icon: CircleDot,
-    description: "Slivers are fed to ring frames where final spinning happens in spindles. Speed and angle determine yarn count. Lower counts (16s, 20s) yield higher kg/hour output."
-  }, {
-    step: 5,
-    name: "Winding",
-    machine: "Winding Machine",
-    icon: Package,
-    description: "The final step where yarn is rolled onto hollow cardboard cylinders, ready for packaging and dispatch to customers."
-  }];
-  return <section id="details" className="py-24 lg:py-32 bg-background">
+
+  const manufacturingProcess = [
+    {
+      step: 1,
+      name: "Carding",
+      machine: "Carding Machine (with Blow Room)",
+      icon: Layers,
+      description: "Cotton bales are spread to make them airy and undergo basic cleaning. The fibers are drawn into thick strands known as sliver.",
+    },
+    {
+      step: 2,
+      name: "Combing",
+      machine: "Combing Machine",
+      icon: Cog,
+      description: "The strands are combed to remove all solid impurities and small fibers, ensuring only quality fibers proceed.",
+    },
+    {
+      step: 3,
+      name: "Drawing",
+      machine: "Speed Frames",
+      icon: Settings,
+      description: "Speed frames pull the thick strands to elongate them and reduce their width. Output is approximately one centimeter thick sliver.",
+    },
+    {
+      step: 4,
+      name: "Spinning",
+      machine: "Ring Frames",
+      icon: CircleDot,
+      description: "Slivers are fed to ring frames where final spinning happens in spindles. Speed and angle determine yarn count. Lower counts (16s, 20s) yield higher kg/hour output.",
+    },
+    {
+      step: 5,
+      name: "Winding",
+      machine: "Winding Machine",
+      icon: Package,
+      description: "The final step where yarn is rolled onto hollow cardboard cylinders, ready for packaging and dispatch to customers.",
+    },
+  ];
+
+  return (
+    <section id="details" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
@@ -69,7 +74,9 @@ const Details = () => {
             About Greige Yarn Production
           </h2>
           
-          <p className="font-body text-lg text-muted-foreground">Greige Yarn is thread spun from cotton and other fibers. Off-white in color, it is later dyed and processed into colorful threads used for fabric manufacturing.</p>
+          <p className="font-body text-lg text-muted-foreground">
+            Greige Yarn (pronounced "grey") is thread spun from cotton and other fibers. Off-white in color, it is later dyed and processed into colorful threads used for fabric manufacturing.
+          </p>
         </ScrollReveal>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
@@ -93,10 +100,12 @@ const Details = () => {
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-3 pt-2">
-                        {yarnTypes.map(yarn => <div key={yarn.type} className="flex justify-between items-center p-3 bg-muted/50 rounded-lg">
+                        {yarnTypes.map((yarn) => (
+                          <div key={yarn.type} className="flex justify-between items-center p-3 bg-muted/50 rounded-lg">
                             <span className="font-body font-medium text-foreground">{yarn.type}</span>
                             <span className="font-body text-sm text-muted-foreground">{yarn.description}</span>
-                          </div>)}
+                          </div>
+                        ))}
                       </div>
                     </AccordionContent>
                   </AccordionItem>
@@ -110,9 +119,14 @@ const Details = () => {
                         Count represents the thinness of thread. Coarser yarns (12s, 16s) are thicker, used in towels. Finer counts (40s+) are premium, used for shirts.
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        {counts.map(count => <span key={count} className="px-4 py-2 bg-accent/10 rounded-full text-accent font-body font-medium text-sm">
+                        {counts.map((count) => (
+                          <span 
+                            key={count}
+                            className="px-4 py-2 bg-accent/10 rounded-full text-accent font-body font-medium text-sm"
+                          >
                             {count}
-                          </span>)}
+                          </span>
+                        ))}
                       </div>
                     </AccordionContent>
                   </AccordionItem>
@@ -137,14 +151,19 @@ const Details = () => {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
-                  {mills.map(mill => <div key={mill.name} className="p-4 bg-muted/50 rounded-xl border border-border">
+                  {mills.map((mill) => (
+                    <div 
+                      key={mill.name}
+                      className="p-4 bg-muted/50 rounded-xl border border-border"
+                    >
                       <div className="font-display font-semibold text-foreground mb-1">
                         {mill.name}
                       </div>
                       <div className="font-body text-sm text-muted-foreground">
                         {mill.products}
                       </div>
-                    </div>)}
+                    </div>
+                  ))}
                 </div>
               </div>
             </ScrollReveal>
@@ -173,9 +192,12 @@ const Details = () => {
               </p>
 
               <div className="space-y-6">
-                {manufacturingProcess.map((process, index) => <div key={process.step} className="relative">
+                {manufacturingProcess.map((process, index) => (
+                  <div key={process.step} className="relative">
                     {/* Connection line */}
-                    {index < manufacturingProcess.length - 1 && <div className="absolute left-5 top-12 w-0.5 h-[calc(100%-0.5rem)] bg-border" />}
+                    {index < manufacturingProcess.length - 1 && (
+                      <div className="absolute left-5 top-12 w-0.5 h-[calc(100%-0.5rem)] bg-border" />
+                    )}
                     
                     <div className="flex gap-4">
                       <div className="relative z-10 w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
@@ -196,12 +218,15 @@ const Details = () => {
                         </p>
                       </div>
                     </div>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </ScrollReveal>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Details;
