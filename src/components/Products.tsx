@@ -3,38 +3,26 @@ import { ArrowUpRight } from "lucide-react";
 const Products = () => {
   const products = [
     {
-      title: "Cotton Yarn",
-      description: "Premium 100% cotton yarn in various counts from Ne 10 to Ne 80. Ideal for knitting, weaving, and industrial applications.",
+      title: "Pure Cotton Yarn",
+      description: "Premium 100% cotton yarn in various counts, known for breathability and comfort. Perfect for apparel and home textiles.",
       counts: "Ne 10 - Ne 80",
       image: "🧶",
     },
     {
-      title: "Blended Yarn",
-      description: "Poly-cotton, viscose blends, and custom fiber combinations tailored to your specific requirements.",
-      counts: "Custom Blends",
+      title: "Polyester Cotton Mix",
+      description: "Durable poly-cotton blended yarns combining the best of both fibers. Excellent strength and easy-care properties.",
+      counts: "Various Ratios",
       image: "🧵",
     },
     {
-      title: "Melange Yarn",
-      description: "Beautifully textured melange yarns with consistent quality and vibrant color combinations.",
-      counts: "Ne 16 - Ne 40",
-      image: "🎨",
-    },
-    {
-      title: "Compact Yarn",
-      description: "High-quality compact spun yarns with superior strength, smoothness, and reduced hairiness.",
+      title: "Pure Polyester Yarn",
+      description: "High-tenacity 100% polyester yarns with excellent durability, colorfastness, and wrinkle resistance.",
       counts: "Ne 20 - Ne 60",
       image: "✨",
     },
     {
-      title: "Organic Yarn",
-      description: "GOTS certified organic cotton yarns for sustainable and eco-conscious textile production.",
-      counts: "Ne 16 - Ne 50",
-      image: "🌱",
-    },
-    {
-      title: "Specialty Yarn",
-      description: "Slub, injected slub, and other specialty yarns for fashion-forward textile applications.",
+      title: "Slub Yarn",
+      description: "Fashion-forward slub and injected slub yarns creating unique textures for contemporary textile applications.",
       counts: "Custom Specs",
       image: "💫",
     },
