@@ -8,7 +8,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Head Office",
-      details: ["Industrial Area Phase-II", "Baddi, Himachal Pradesh 173205", "India"],
+      details: ["Industrial Area", "Goodi, Himachal Pradesh", "India"],
     },
     {
       icon: Phone,
@@ -18,7 +18,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@himalayanspinners.com", "exports@himalayanspinners.com"],
+      details: ["mis@himalayanspinners.com", "info@himalayanspinners.com"],
     },
     {
       icon: Clock,
