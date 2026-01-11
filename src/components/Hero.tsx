@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-yarn.jpg";
+import heroImage from "@/assets/hero-machinery.jpg";
 const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center">
       {/* Background Image */}
