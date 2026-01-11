@@ -20,7 +20,7 @@ const Quality = () => {
     },
     {
       icon: Microscope,
-      title: "Uster Tested",
+      title: "Thoroughly Tested",
       description: "All yarns tested for quality parameters using advanced testing instruments",
     },
     {
