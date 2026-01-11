@@ -19,7 +19,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["mis@himalayanspinners.com", "info@himalayanspinners.com"],
+      details: ["mis@himalayanspinners.com", "info@himalayanspinners.com", "misinfo@himalayanspinners.com"],
     },
     {
       icon: Clock,
