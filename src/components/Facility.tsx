@@ -243,14 +243,7 @@ const Facility = () => {
 
             {/* Market Info */}
             <ScrollReveal delay={0.2}>
-              <div className="bg-accent/5 rounded-2xl p-8 border border-accent/20">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-4">
-                  Market Position
-                </h3>
-                <p className="font-body text-muted-foreground leading-relaxed">
-                  Greige yarn is a commodity product with no fixed vendors or customers, though we maintain strong repeat business relationships. Himalayan Spinners yarn is respected for its consistent quality in both domestic and international markets.
-                </p>
-              </div>
+              
             </ScrollReveal>
           </div>
 
